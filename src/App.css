@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100vw;
+  background-color: yellow;
+  padding: 20px 60px;
+}
+
+header h1 {
+  color: aqua;
+  font-size: 16px;
+}
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.galeria img{
+  width: 250px;
+  height: 250px;
+}
