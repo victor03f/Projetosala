@@ -1,33 +1,25 @@
-import { useState } from 'react'
-import Fotos from './componentes/Fotos'
-import Header from './componentes/header'
-import Banner from './componentes/Banner'
-import './App.css'
-
+// Importa o módulo React do pacote react
+import React from 'react';
+// Importa módulos específicos do pacote react-router-dom
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// Importa o componente Home da pasta 'pages'
+import Home from './pages/Calopsita';
+// Importa o componente Sobre da pasta 'pages'
+import Sobre from './pages/Sobre';
+// Define a função do componente principal App
 function App() {
-  const [count, setCount] = useState(0)
-
+  // Retorna a estrutura de roteamento usando o BrowserRouter
   return (
-    <div className='app'>
-  <Header/>
-      <section>
-        <Fotos/>
-      </section>
-      <section>
-        <h2>
-          Sobre:
-        </h2>
-        <p>
-        A Calopsita é a principal ave doméstica e muito popular por serem extremamente dóceis, inteligentes e fáceis de cuidar. Sua origem é australiana, tendo sua primeira descrição científica registrada em 1792. Mas foi em 1838 que John Gould, um ornitólogo inglês, viajou para a Austrália a fim de estudar a fauna da região.
-        </p>
-        <Banner/>
-      </section>
-
-    </div>
-
-
-
-  )
+    <Router>
+      {/* Define as rotas usando o componente Routes */}
+      <Routes>
+        {/* Rota para a página Home com o componente associado */}
+        <Route path="/" element={<Home />} />        
+       {/* Rota para a página About com o componente associado */}
+        <Route path="/Sobre" element={<Sobre />} />
+      </Routes>
+    </Router>
+  );
 }
-
-export default App
+// Exporta o componente App como padrão
+export default App;
