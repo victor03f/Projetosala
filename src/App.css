@@ -20,8 +20,8 @@
 }
 
 .galeria img {
-  width: 250px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
 }
 
 .sobre {
@@ -41,4 +41,12 @@
 .paginaSobre{
   font-size: 40px;
  font-style: italic;
+}
+p{
+  font-size: 16px;
+  font-style: italic;
+}
+h2{
+  font-size: 26px;
+  font-family: Georgia, serif;
 }
